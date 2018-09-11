@@ -42,7 +42,7 @@ app.get('/checkout', (req, res, next) => {
     payment_method: paymentMethod
   })
 
-  res.json({ status: 'ok' })
+  res.json({ status: 'ok', paymentMethod: paymentMethod })
   next()
 })
 
@@ -71,7 +71,7 @@ app.use((req, res, next) => {
 })
 
 const server = app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
+  console.log(`Example app - instrumented for Prometheus - is listening on port ${port}!`)
 })
 
 // Graceful shutdown
