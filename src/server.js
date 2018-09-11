@@ -36,7 +36,8 @@ app.get('/bad', (req, res, next) => {
 })
 
 app.get('/checkout', (req, res, next) => {
-  const paymentMethod = Math.round(Math.random()) === 0 ? 'stripe' : 'paypal'
+  var pm = req.query.payment_method;
+  const paymentMethod = pm?  pm : (Math.round(Math.random()) === 0 ? 'stripe' : 'paypal')
 
   checkoutsTotal.inc({
     payment_method: paymentMethod
