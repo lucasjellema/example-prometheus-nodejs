@@ -6,7 +6,7 @@ Setup monitoring with [Prometheus](https://prometheus.io) and [Grafana](https://
 
 ## Steps
 
-1. Run sample server: `npm install` and `node server`
+1. Run sample server: `npm install` and `node server` ; then perform requests to the application - especially to path /checkout
 2. Run Prometheus: see below
 3. Visit your running Prometheus and run queries
 4. Run Grafana: see below
