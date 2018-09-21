@@ -43,7 +43,7 @@ app.get('/checkout', (req, res, next) => {
     payment_method: paymentMethod
   })
 
-  res.json({ status: 'ok', paymentMethod: paymentMethod })
+  res.json({ status: 'ok now', paymentMethod: paymentMethod })
   next()
 })
 
