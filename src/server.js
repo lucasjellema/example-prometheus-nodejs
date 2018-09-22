@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res, next) => {
   setTimeout(() => {
-    res.json({ message: 'Extra special Hello World from Sample App!' })
+    res.json({ message: 'Extra special Hello World and beyond from Sample App!' })
     next()
   }, Math.round(Math.random() * 200))
 })
